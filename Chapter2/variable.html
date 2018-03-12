@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Variable </title>
+		<meta charset="utf-8">
+		<script>
+			function first_function(){
+				a = 1;
+				document.write("first_function's a : " + a + "<br><br>");
+				second_function();
+				document.write("first_function's a : "  + a + "<br><br>");
+			}
+			function second_function(){
+				var a = 100;
+				document.write("second_fuction's a : " + a + "<br><br>");
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			first_function();
+		</script>
+	</body>
+</html>

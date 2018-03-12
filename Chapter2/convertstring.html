@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Convert To String </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+				var newNumber = 34.56;
+				var newBoolean = true;
+				var nothing;
+				var newNull = null;
+				var strNumber = String(newNumber);
+				var strBoolean = String(newBoolean);
+				var strUndefined = String(nothing);
+				var strNull = String(newNull);
+				var strOutput = "<p>" + strNumber + "<br>" + strBoolean + "<br>" + strUndefined +
+				   "<br>" + strNull + "</p>";
+				document.writeln(strOutput);
+				var strOutput2 = String(document);
+				document.writeln(strOutput2);
+		</script>
+	</body>
+</html>
+
+

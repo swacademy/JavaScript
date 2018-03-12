@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> escape() </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var str = escape("http://www.naver.com");
+			document.write("<p>" + str + "</p>");
+			
+			var str1 = escape("http://burningbird.net/index.php?pagename=$1&page=$2");
+			document.write("<p>" + str1 + "</p>");
+			
+			document.write("<hr>");
+			
+			str = unescape("http%3A//www.naver.com");
+			document.write("<p>" + str + "</p>");
+			
+			str1 = 
+			   unescape("http%3A//burningbird.net/index.php%3Fpagename%3D%241%26page%3D%242");
+			   document.write("<p>" + str1 + "</p>");
+			   
+		</script>
+	</body>
+</html>
+
+
+

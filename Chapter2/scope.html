@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Variable Scope </title>
+		<meta charset="utf-8">
+		<script src="global.js"></script>
+		<script src="global2.js"></script>
+		<script>
+			message = "I'm in the page.";
+			function testScope(){
+				message += " called in testScope()";
+				alert(message);
+			}
+		</script>
+	</head>
+	<body onload="testScope();global2Print();globalPrint();">
+		<script>
+			message += " embedded in page.";
+			document.writeln(message);
+		</script>
+	</body>
+</html>
+
+
