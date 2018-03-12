@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Object Initializers Expressions </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var Picture = { id : 3,
+									 title : "middle way",
+									 date : new Date("12/25/2013"),
+									 details : {
+										type : "photograph",
+										keywords : ["landscape", "tranquil", "green", "vegetation"]
+									 }
+								}
+			var str = "Title : " + Picture.title + "\n";
+			str += "Date : " + Picture['date'] + "\n";
+			str += "Details Type : " + Picture.details.keywords[1];//Picture['details']['type'];
+			alert(str);
+		</script>
+	</body>
+</html>
+
+

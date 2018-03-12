@@ -1,0 +1,16 @@
+﻿table {  
+    border : solid  1px  orange ; 
+    border-collapse : collapse; 
+	width : 300px;
+}
+th {
+    border : solid 1px orange ; 
+    background-color:#FFCC66; 
+    color : white;   
+}
+td {
+    border : solid 1px orange ;  
+}
+
+
+

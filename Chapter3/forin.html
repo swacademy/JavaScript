@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> for in Statement </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var obj = {x : 1, y : 3, z : 2 };
+			for(var a in obj){
+				document.write(a + "<br>");
+			}
+			
+			for(var a in obj){
+				document.write(a + " ==> " + obj[a] + "<br>");
+			}
+			document.write("<hr>");
+			
+			var array = [7,1,5];
+			for(var n in array){
+				document.write(n + " ==> " + array[n] + "<br>");
+			}
+		</script>
+	</body>
+</html>
+
+

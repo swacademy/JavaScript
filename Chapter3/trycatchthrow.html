@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> try catch finally with throw Statement </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function myFunction() {
+				var y = document.getElementById("mess");
+				y.innerHTML = "";
+				try { 
+					var x = document.getElementById("demo").value;
+					if(x == "")    throw "empty";
+					if(isNaN(x)) throw "not a number";
+					if(x > 10)     throw "too high";
+					if(x < 5)      throw "too low";
+				} catch(err) {
+					y.innerHTML = "Error: " + err + ".";
+				}
+			}
+		</script>
+
+		<h1>try catch finally with throw Statement</h1>
+		<p>Please input a number between 5 and 10:</p>
+			<input id="demo" type="text">
+			<button type="button" onclick="myFunction()">Test Input</button>
+		<p id="mess"></p>
+	</body>
+</html>
+
+

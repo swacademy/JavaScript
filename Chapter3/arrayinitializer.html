@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Array Initializer Expressions </title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="table.css">
+	</head>
+	<body>
+		<script>
+			var clouds = ["cumulus", "nimbus", "cirrus"];
+			var str = "";
+			for(var i = 0 ; i < clouds.length ; i++){
+				str += "I wandered lonely as a " + clouds[i] + "\n";
+			}
+			alert(str);
+			
+			document.write("<table>");
+			document.write("<tr>");
+			document.write("<th>No.</th><th>Name</th><th>Age</th>");
+			document.write("</tr>");
+			var cards = [[1, "Michael", 30],[2, "Sujan", 25],[3, "Sally", 45]];
+			for(var i = 0 ; i < cards.length ; i++){
+				document.write("<tr>");
+				for(var j = 0 ; j < cards[i].length ; j++){
+					document.write("<td>" + cards[i][j] + "</td>"); 
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+	</body>
+</html>
+

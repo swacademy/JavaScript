@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> for each in Statement </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			try{
+				var sum = 0;
+				var obj = {prop1: 5, prop2: 13, prop3: 8};
+				for each (var item in obj) {
+					sum += item;
+				}
+				document.write(sum);
+			}catch(e){
+				document.write("SyntaxError");
+			}finally{
+				document.write("<br><br>Program is End");
+			}
+		</script>
+	</body>
+</html>
+
+

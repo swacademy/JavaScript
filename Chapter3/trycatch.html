@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> try catch Statement </title>
+		<meta charset="utf-8">
+		<script>
+			var txt="";
+			function message() {
+				try {
+				  adddlert("Welcome guest!");
+				} catch(err) {
+				  txt="There was an error on this page.\n\n";
+				  txt+="Error description: " + err.message + "\n\n";
+				  txt+="Click OK to continue.\n\n";
+				  alert(txt);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="View message" onclick="message()" />
+	</body>
+</html>
+
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> if...else Statements </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var inputNum = prompt("Please enter a number between 50 and 100:");
+			
+			if(isNaN(inputNum)){
+				alert(inputNum + " doesn't appear to be a number.");
+			} else if((inputNum > 99) || (inputNum < 51)){
+				alert("That number, " + inputNum + ", is not between 50 and 100.");
+			} else {
+				alert(inputNum + "is a valid number.");
+			}
+			
+		</script>
+	</body>
+</html>
+
+

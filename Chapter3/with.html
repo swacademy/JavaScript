@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> with Statement </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var a, x, y;
+			var r = 10;
+			
+			with(Math){
+				a = PI * r * r;
+				x = r * cos(PI);
+				y = r * sin(PI / 2);
+			}
+			document.write(a + ", " + x + ", " + y);
+		</script>
+	</body>
+</html>
+
+

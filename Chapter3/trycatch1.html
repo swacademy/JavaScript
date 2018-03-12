@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> try catch finally Statement </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var su = prompt("Input a positive number : ");
+			su = parseInt(su);
+			try{
+				if(su < 0) throw new Error(su + " is not positive number.");
+				document.write("su = " + su);
+			}catch(ex){
+				document.write(ex);
+			} finally{
+				document.write("<br><br>Program is Over...");
+			}
+		</script>
+	</body>
+</html>
+
+

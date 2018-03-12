@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Shift Operators </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			su = 8;
+			document.write("<p>8 = " + su.toString(2));
+			document.write("(<strong>" + su.toString(16) + "</strong>)</p>");
+			su1 = su << 3;
+			document.write("<p>8 << 3 = " + su1 + " -> " + su1.toString(2));
+			document.write("(<strong>" + su1.toString(16) + "</strong>)</p>");
+			
+			su = -1;
+			document.write("<p>-1 = " + su.toString(2));
+			document.write("(<strong>" + su.toString(16) + "</strong>)</p>");
+			su1 = su >> 4;
+			document.write("<p>-1 >> 4 = " + su1 + " -> " + su1.toString(2));
+			document.write("(<strong>" + su1.toString(16) + "</strong>)</p>");
+			su2 = su >>> 4;
+			document.write("<p>-1 >>> 4 = " + su2 + " -> " + su2.toString(2));
+			document.write("(<strong>" + su2.toString(16) + "</strong>)</p>");
+		</script>
+	</body>
+</html>
+
+
