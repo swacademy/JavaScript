@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> String Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			str = new String("자바스크립트배우기");
+			document.write("<p>\"자바스크립트배우기\"의 길이 : " + str.length + "</p>");
+			document.write("<p>str.chatAt(0) = " + str.charAt(0) + "</p>");			
+			document.write("<p>str.concat('Wow') = " + str.concat('Wow') + "</p>");
+			
+			str1 = new String("Learing");
+			document.write("<p>str.concat(str1, 'JavaScript!') = " + str.concat(str1, "JavaScript!") + "</p>");
+			str = str.concat(str1, 'JavaScript!');
+			document.write("<p>str.indexOf('S') = " + str.indexOf('S') + "</p>");
+			document.write("<p>str.indexOf('VB') = " + str.indexOf('VB') + "</p>");
+			
+			str2 = new String("자바스크립트1 자바스크립트2");
+			document.write("<p>str2.lastIndexOf('자') = " + str2.lastIndexOf('자') + "</p>");
+			
+			document.write("<p>str2.slice(2,6) = " + str2.slice(2,6) + "</p>");
+			document.write("<p>str2.substr(2,6) = " + str2.substr(2,6) + "</p>");
+		</script>
+	</body>
+</html>
+
+

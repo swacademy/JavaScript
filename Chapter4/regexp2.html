@@ -1,0 +1,18 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.86 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> RegExp Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var regExp = /:\D*\s\d+\s\d+/;
+			var str = "This is a date: March 12 2009";
+			var resultString = str.match(regExp);
+			alert("Date" + resultString);
+		</script>
+	</body>
+</html>
+
+

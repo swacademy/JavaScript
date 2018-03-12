@@ -1,0 +1,19 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.88 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> RegExp Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var rgExp = /(\w*)-*(\w*)/
+			var str = "Java---Script";
+			var resultStrng = str.replace(rgExp,"$2-$1");
+			alert(resultStrng);
+		</script>
+	</body>
+</html>
+
+
+

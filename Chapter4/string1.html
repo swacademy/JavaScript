@@ -1,0 +1,26 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.80 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> String Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var inputString = 
+				new String('firstName=Shelley,lastName=Powers,state=Missouri,statement="This is a test,of split"');
+			var arrayTokens = inputString.split(',',3);
+
+			// process split on commas
+			for (var i = 0; i < arrayTokens.length; i++) {
+				document.writeln(arrayTokens[i] + "<br />");
+			
+				// now split on equals and write just value
+				var newTokens = arrayTokens[i].split('=');
+				document.writeln(newTokens[1] + "<br /><br />");
+			}
+		</script>
+	</body>
+</html>
+
+

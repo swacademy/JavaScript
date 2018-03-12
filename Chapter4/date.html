@@ -1,0 +1,31 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.91 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Date Object</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			// new date
+			var dtNow = new Date();
+		
+			// set day, month, year
+			dtNow.setDate(18);
+			dtNow.setMonth(10);
+			dtNow.setYear(1954);
+			dtNow.setHours(7);
+			dtNow.setMinutes(2);
+
+			// output formatted
+			document.writeln(dtNow.toString() + "<br />");
+			document.writeln(dtNow.toLocaleString() + "<br />");
+			document.writeln(dtNow.toLocaleDateString() + "<br />");
+			document.writeln(dtNow.toLocaleTimeString() + "<br />");
+			document.writeln(dtNow.toGMTString() + "<br />");
+			document.writeln(dtNow.toUTCString());
+		</script>
+	</body>
+</html>
+
+

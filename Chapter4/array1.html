@@ -1,0 +1,25 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.95 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Array Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var quoteArray = new Array(5);
+			quoteArray[0] = "Quote one";
+			quoteArray[1] = "Quote two";
+			quoteArray[2] = "Quote three";
+			quoteArray[3] = "Quote four";
+			quoteArray[4] = "Quote five";
+		
+			iValue = Math.random(); // random number between 0 and 1
+			iValue *= 5; // multiply by 5 to move the decimal
+			iValue = Math.floor(iValue); // round to nearest integer
+			alert(quoteArray[iValue]);
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.98 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Array Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			// create FIFO queue and add items using push
+			var fifoArray = new Array();
+			fifoArray.push("Apple");
+			fifoArray.push("Banana");
+			var ln = fifoArray.push("Cherry");
+			// print out length and array
+			document.writeln("length is " + ln + " and array is " + fifoArray + "<br />");
+			// use shift to shift the items off the array
+			for (var i = 0; i < ln; i++) {
+				document.writeln(fifoArray.shift() + "<br />");
+			}
+			// print out length
+			document.writeln("length now is " + fifoArray.length + "<br /><br />");			
+			// now, same with unshift
+			var fifoNewArray = new Array();
+			fifoNewArray.unshift("Learning");
+			fifoNewArray.unshift("Java");
+			ln = fifoNewArray.unshift("Script");			
+			document.writeln("length is " + ln + " and array is " + fifoNewArray + "<br/>");
+			// unshift
+			for (var i = 0; i < ln; i++) {
+				document.writeln(fifoNewArray.pop() + "<br />");
+			}
+			document.writeln("new length is " + fifoNewArray.length );
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.83 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> RegExp Object </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var re = /(ds)+(j+s)/ig;
+			var str = "cfdsJS *(&dsjjjsYJSjs 888dsdsJS";
+			var resultArray = re.exec(str);
+			while (resultArray) {
+				document.writeln(resultArray[0]);
+				document.writeln(" next match starts at " + re.lastIndex + "<br />");
+				for (var i = 1; i < resultArray.length; i++) {
+					document.writeln("substring of " + resultArray[i] + "<br />");
+				}
+				document.writeln("<br />");
+				resultArray = re.exec(str);
+			}
+		</script>
+	</body>
+</html>
+
+

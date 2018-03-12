@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Object Literal </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var empty = {};                                        // An object with no properties
+			var point = { x:0, y:0 };                            // Two properties
+			var point2 = { x:point.x, y:point.y+1 };      // More complex values
+			var book = { 
+				"main title": "JavaScript",                       // Property names include spaces,
+				'sub-title': "The Definitive Guide",           // and hyphens, so use string literals
+				"for": "all audiences",                             // for is a reserved word, so quote
+				author: {                                              // The value of this property is
+					firstname: "David",                            // itself an object. Note that
+					surname: "Flanagan"                         // these property names are unquoted.
+				}
+			};
+			document.write("<p>point.x = " + point.x + "</p>");
+			document.write("<p>point2.y = " + point2.y + "</p>");
+			document.write("<p>book['main title'] = " + book['main title'] + "</p>");
+			document.write("<p>book.for = " + book.for + "</p>");
+			document.write("<p>book.author['surname'] = " + book.author.surname + "</p>");
+		</script>
+	</body>
+</html>
+
+
