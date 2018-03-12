@@ -1,0 +1,39 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, pp.111-112 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Recursion </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function runRecursion() {
+				var addNumbers = function sumNumbers(numArray,indexVal,resultArray) {
+					// recursion test
+					if (indexVal == numArray.length)
+						return resultArray;				
+					// perform numeric addition
+					resultArray[0] += Number(numArray[indexVal]);				
+					// perform string concatenation
+					if (resultArray[1].length > 0) {
+						resultArray[1] += " and ";
+					}
+					resultArray[1] += numArray[indexVal].toString();				
+					// increment index
+					indexVal++;				
+					// call function again, return results
+					return sumNumbers(numArray,indexVal,resultArray);
+				}			
+				// create numeric array, and the result array
+				var numArray = ['1','35.4','-14','44','0.5'];
+				var resultArray = new Array(0,''); // necessary for the initial case			
+				// call function
+				var result = addNumbers(numArray,0, resultArray);			
+				// output
+				document.writeln(result[0] + "<br />");
+				document.writeln(result[1]);
+			}
+			runRecursion();
+		</script>
+	</body>
+</html>

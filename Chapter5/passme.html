@@ -1,0 +1,33 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, p.105 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Pass Me </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function alterArgs(strLiteral, aryObject) {
+				
+				// overwrite original string
+				strLiteral = "Override";
+				aryObject[1] = "2";
+				aryObject[aryObject.length] = "three";
+			}
+
+			function testParams() {
+				var str = "Original Literal";
+				var ary = new Array("one","two");
+
+				document.writeln("string literal is " + str + "<br />");
+				document.writeln("Array object is " + ary + "<br /><br />");
+
+				alterArgs(str,ary);
+
+				document.writeln("string literal is " + str + "<br /> ");
+				document.writeln("Array object is " + ary);
+			}
+			testParams();
+		</script>
+	</body>
+</html>

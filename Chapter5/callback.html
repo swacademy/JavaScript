@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Callback Function </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function callbackTest(arg){
+				document.write("<p>arg = " + arg + "</p>");
+			}
+			function test(args1, arg2, callback){
+				if(typeof callback == "function") callback();
+			}
+			test('a', 'b', callbackTest("Hello, World"));
+		</script>
+	</body>
+</html>
+

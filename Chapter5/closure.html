@@ -1,0 +1,36 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, pp.113-114 -->
+<!DOCTYPE html>
+	<head>
+		<title> Closure </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<script>
+			// outer function
+			function outerFunc(base) {
+				var punc = "!";
+				// return inner function
+				return function (ext) {
+					return base + ext + punc;
+				}
+			}			
+			function processNested() {				
+				// create access to inner function
+				var baseString = outerFunc("Hello ");		
+				//alert(baseString);
+				// inner function still has access to outer function argument
+				var newString = baseString("World!");
+				alert(newString);				
+				// and still
+				var notherString = baseString("Reader!");
+				alert(notherString);				
+				// create another instance of inner function
+				var anotherBase = outerFunc("Hiya, Hey ");				
+				// another local string
+				var lastString = anotherBase("you!");
+				alert(lastString);
+			}
+			processNested();
+		</script>
+	</body>
+</html>

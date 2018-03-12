@@ -1,0 +1,29 @@
+<!-- Shelley Powers, Learning JavaScript 2nd Edition, O'Reilly, 2009, pp.107-108 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Build a Function </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>		
+			function buildFunction() {
+				
+				// prompt for function and args
+				var func= prompt("Enter function body:");
+				var x = prompt("Enter value of x:");
+				var y = prompt("Enter value of y:");
+				
+				// invoke anonymous function
+				var op = new Function("x", "y", func);
+				var theAnswer = op(x, y);
+				
+				// print out results
+				document.write("<p>Function is: " + func + "</p>");
+				document.write("<p>x is: " + x + " y is: " + y+ "</p>");
+				document.write("<p>The answer is: " + theAnswer+ "</p>");
+			}
+			buildFunction();
+		</script>
+	</body>
+</html>

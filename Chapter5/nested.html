@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Nested Function </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			function addFive(theVal){
+				function addNumber(howmany){
+					return theVal + howmany;
+				}
+				return addNumber(5);
+			}
+			document.write("<p>addFive(5) = " + addFive(5) + "</p>");
+		</script>
+	</body>
+</html>
+
+

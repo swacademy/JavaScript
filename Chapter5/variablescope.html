@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Variable Scope </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var x = 1;
+			function f(){
+				document.write("x = " + x + "<br><br>");
+				var x = 2;
+				document.write("x = " + x);
+			}
+			f();
+		</script>
+	</body>
+</html>
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> New Document </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			var pet = function(name){
+				var getName = function(){
+					return name;
+				}
+				return getName;
+			}, myPet = pet("Vivie");
+			document.write(myPet());
+		</script>
+	</body>
+</html>
