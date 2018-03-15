@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> Slideshow </title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			var currentPhoto = 0;
+			var pics = new Array();
+			window.onload=function() {
+				for (var i = 0; i < 5; i++)
+					pics[i] = new Image();
+			
+				pics[0].src = "images/fig1.jpg";
+				pics[1].src = "images/fig2.jpg";
+				pics[2].src = "images/fig3.jpg";
+				pics[3].src = "images/fig4.jpg";
+				pics[4].src = "images/fig5.jpg";
+				document.getElementById("next").onclick=nextPic;
+				document.getElementById("prev").onclick=prevPic;
+			}
+			
+			function changePhoto(photo) {
+				document.images[0].src = pics[photo].src;
+			}
+			
+			function nextPic() {
+				currentPhoto++;
+				if (currentPhoto < pics.length) 
+					changePhoto(currentPhoto);
+				else
+					alert("at the end of the photo list");
+			}
+			
+			function prevPic() {
+				if (currentPhoto > 0) {
+					currentPhoto--;
+					changePhoto(currentPhoto);
+				} else {
+					alert("at the beginning of the photo list");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="next"><span>Next</span></div>
+		<div id="prev"><span>Previous</span></div>
+		<img src="images/fig5.jpg" />
+	</body>
+</html>

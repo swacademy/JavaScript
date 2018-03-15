@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> Timers </title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			#block { width:  400px; }
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.getElementById("block").style.backgrondColor = "#ffffff";
+				setTimeout("colorFlash(255)", 300);
+			}
+			
+			function colorFlash(newColor){
+				var hexVal = newColor.toString(16);
+				//make sure length is 2
+				if(hexVal.length < 2) hexVal = "0" + hexVal;
+				
+				var colorString = "#ffff" + hexVal;
+				var blockDiv = document.getElementById("block");
+				blockDiv.style.backgroundColor = colorString;
+				if(newColor > 0) {
+					newColor -= 5;
+					setTimeout("colorFlash(" + newColor + ")", 50);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="block"><h1> Hello </h1> </div>
+	</body>
+</html>
+
+
+

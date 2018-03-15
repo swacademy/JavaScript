@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> innerHTML </title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			window.onload = function() {
+				setTimeout("changeElements()", 3000);
+			}
+			
+			function changeElements() {
+				var elem1 = document.getElementById("elem1");
+				var elem2 = document.getElementById("elem2");
+				var elem3 = document.getElementById("elem3");
+				var tmp = elem1.innerHTML;
+				elem1.innerHTML = elem3.innerHTML;
+				elem3.innerHTML = elem2.innerHTML;
+				elem2.innerHTML = tmp;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="elem1">
+			<p>Paragraph text.</p>
+		</div>
+		<div id="elem2">
+			<ul>
+				<li>option 1</li>
+				<li>option 2</li>
+			</ul>
+		</div>
+		<div id="elem3">
+			<p><a href="ch09-12.html">Lab 9</a></p>
+		</div>
+	</body>
+</html>
+
+
+
+
+
