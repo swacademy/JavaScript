@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> width/height example </title>
+		<meta charset="utf-8">
+		<script>
+			window.onload = function () {
+			  var arrImages = new Array(3);
+
+			  arrImages[0] = document.getElementById("image1");
+			  arrImages[1] = document.getElementById("image2");
+			  arrImages[2] = document.getElementById("image3");
+
+			  var objOutput = document.getElementById("output");
+			  var strHtml = "<ul>";
+
+			  for (var i = 0; i < arrImages.length; i++) {
+				strHtml += "<li>image" + (i+1) + 
+						": height=" + arrImages[i].height + 
+						", width=" + arrImages[i].width + 
+						", style.height=" + arrImages[i].style.height + 
+						", style.width=" + arrImages[i].style.width + 
+						"<\/li>";
+			  }
+
+			  strHtml += "<\/ul>";
+
+			  objOutput.innerHTML = strHtml;
+			}
+		</script>
+	</head>
+	<body>
+		<p>Image 1: no height, width, or style 
+		  <img id="image1" src="images/apple.jpg">
+		</p>
+
+		<p>Image 2: height="768", width="1152", but no style 
+		  <img id="image2" src="images/grape.jpg" height="768" width="1152">
+		</p>
+
+		<p>Image 3: no height, width, but style="height: 50px; width: 500px;"
+		  <img id="image3" src="images/peaches.jpg" style="height: 667px; width: 1000px;">
+		</p>
+
+		<div id="output"> </div>
+	</body>
+</html>
