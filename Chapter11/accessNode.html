@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Page as Tree</title>
+		<script>
+			// random color generator
+			function randomColor() {
+				var r=Math.floor(Math.random() * 255).toString(16);
+				r = (r.length < 2) ? "0" + r : r;
+				var g=Math.floor(Math.random() * 255).toString(16);
+				g = (g.length < 2) ? "0" + g : g;
+				var b=Math.floor(Math.random() * 255).toString(16);
+				b = (b.length < 2) ? "0" + b : b;
+				return "#"+r+g+b;
+			}
+			// output some node properties
+			function outputNodeProps(nd) {
+				var strNode = "Node Type: " + nd.nodeType;
+				strNode += "\nNode Name: " + nd.nodeName;
+				strNode += "\nNode Value: " + nd.nodeValue;
+				// if style set (property of Element)
+				if (nd.style) {
+					var clr = randomColor();
+					nd.style.backgroundColor=clr;
+					strNode += "\nbackgroundColor: " + clr;
+				}
+				// print out the node's properties
+				alert(strNode);
+				// now process node's children
+				var children = nd.childNodes;
+				for(var i=0; i < children.length; i++) {
+					outputNodeProps(children[i]);
+				}
+			}
+			window.onload=function() {
+				outputNodeProps(document.body);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<h1>Header</h1>
+			<!-- paragraph one -->
+			<p>To better understand the document tree, consider a web page that 
+			has a head and body section, a page title, and the body contains a div 
+			element that itself contains a header and two paragraphs. One of the 
+			paragraphs contains <i>italicized text</i>; the other has an image--not 
+			an uncommon web page.</p>
+			<!-- paragraph two -->
+			<p>Second paragraph with image. 
+				<img src="ospreythumb.jpg" alt="bird" />
+			</p>
+		</div>
+	</body>
+</html>

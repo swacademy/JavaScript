@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modifying HTML Elements </title>
+		<meta charset="utf-8">
+		<script>
+			function changeImage() {
+				var img = document.images[0];
+				
+				// get existing image attributes
+				var imgAttr = img.id + " " + img.alt + " " + img.className;
+				alert(imgAttr);
+				
+				// modify
+				img.src="images/upright.gif";
+				img.width="100";
+				img.height="100";
+				img.alt="Alternative";
+				img.align="left";
+				img.title="Upright";
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="changeImage()">Click Me!</button><br>
+		<p><img src="images/dotty.gif" alt="Dotty"></p>
+	</body>
+</html>
+
+
+
+

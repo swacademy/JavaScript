@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modifying HTML Elements </title>
+		<meta charset="utf-8">
+		<script>
+			function changeImage() {
+				// get table and image
+				var tbl = document.getElementById('table1');
+				tbl.border="5px";
+				tbl.cellPadding="5px";
+				var img = document.getElementById("img1");
+				img.vspace="10";
+				// for each attribute, add table row
+				var row1 = tbl.insertRow(-1);
+				// create two table cells
+				var cell1 = row1.insertCell(0);
+				var cell2 = row1.insertCell(1);
+				// create text values
+				var txtAttr1 = document.createTextNode("src");
+				var txtAttr1Val = document.createTextNode(img.src);
+				// append to text values to cells
+				cell1.appendChild(txtAttr1);
+				cell2.appendChild(txtAttr1Val);
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" onclick="changeImage()">Click Me!</button><br>
+		<p><img src="images/dotty.gif" id="img1" /></p>
+		<table id="table1">
+			<tr><th>Attribute</th><th>Value</th></tr>
+		</table>
+	</body>
+</html>
+
+
+
+

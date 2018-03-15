@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modifying Document </title>
+		<meta charset="utf-8">
+		<script type="text/javascript">
+			document.onclick=changeDoc;
+			function changeDoc() {
+			
+				// first, remove header
+				var hdr = document.getElementById("hdr1");
+				var div = document.getElementById("div1");
+				div.removeChild(hdr);
+			
+			// replace the image with text
+				var img = document.getElementById("img1");
+				var p = document.getElementById("p2");
+				var txt = document.createTextNode("New text node");
+				p.replaceChild(txt,img);
+
+				// add new element
+				var div2= document.createElement("div");
+				div2.innerHTML="<h1>The End</h1>";
+				document.body.appendChild(div2);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<h1 id="hdr1">Header</h1>
+			<!-- paragraph one -->
+			<p id="p1">To better understand the document tree, consider a web page 
+			that has a head and body section, has a page title, and contains 
+			a DIV element that itself contains a H1 header and two paragraphs. 
+			One of the paragraphs contains <i>italicized text</i>, the other an 
+			image--not an uncommon web page.</p>
+			<!-- paragraph two -->
+			<p id="p2">Second paragraph with image. 
+			<img id="img1" src="images/dotty.gif" alt="dotty" /></p>
+		</div>
+</body>
+</html>
+
+

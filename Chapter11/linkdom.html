@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Modifying HTML Elements </title>
+		<meta charset="utf-8">
+		<script>
+			window.onload=function() {
+				// get the links and the div element
+				var theLinks = document.links;
+				var theHrefs = document.getElementById("hrefs");
+				// for each link
+				for (var i = 0; i < theLinks.length; i++) {
+					// get href
+					var href = theLinks.item(i).href;
+					// create text node from href, append to new paragraph element
+					var p = document.createElement("p");
+					var txt = document.createTextNode(href);
+					p.appendChild(txt);
+					// append new paragraph to div element
+					theHrefs.appendChild(p);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p>A good reference for the DOM is the <a
+		href="http://xml.coverpages.org/dom.html">OASIS Technology Report
+		on the DOM</a>. In addition, the primary DOM location at the W3C is the 
+		<a href="http://www.w3.org/DOM/">W3C Document Object Model page</a>, 
+		from which you can then access each DOM level. A handy interactive guide to
+		test your user agent (browser) and its compliance to the DOM can be found at
+		<a href="http://www.w3.org/2003/02/06-dom-support.html">the W3C</a>, 
+		though I'm not sure how up-to-date it is since it's not showing 
+		the DOM Level 3 support browsers have implemented.</p>
+		<div id="hrefs">
+			<h3>The links</h3>
+		</div>
+	</body>
+</html>
+
+
+
+
