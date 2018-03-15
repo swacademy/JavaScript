@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Cookie Demo </title>
+		<meta charset="utf-8">
+		<script>
+			window.onload = function(){
+				if (navigator.cookieEnabled) {
+					var sum = readCookie("sum");
+					if (sum) {
+						var iSum = parseInt(sum) + 1;
+						alert("cookie count is " + iSum);
+						if (iSum > 5) {
+							eraseCookie("sum");
+						} else {
+							setCookie("sum",iSum);
+						}
+					} else {
+						alert("no cookie, setting now");
+						setCookie("sum", 0);
+					}
+				}
+			}
+			// set cookie expiration date in year 2015
+			function setCookie(key,value) {
+				var cookieDate = new Date(2015,11,10,19,30,30);
+				document.cookie=key + "=" + encodeURI(value) + "; expires=" + 
+				cookieDate.toGMTString() + "; path=/";
+			}
+			// each cookie separated by semicolon;
+			function readCookie(key) {
+				var cookie = document.cookie;
+				var first = cookie.indexOf(key+"=");
+				// cookie exists
+				if (first >= 0) {
+					var str = cookie.substring(first,cookie.length);
+					var last = str.indexOf(";");
+					// if last cookie
+					if (last < 0) last = str.length;
+					// get cookie value
+					str = str.substring(0,last).split("=");
+					return decodeURI(str[1]);
+				} else {
+					return null;
+				}
+			}
+			// set cookie date to the past to erase
+			function eraseCookie (key) {
+				var cookieDate = new Date(2000,11,10,19,30,30);
+				document.cookie=key + "= ; expires="+cookieDate.toGMTString()+"; path=/";
+			}
+		</script>		
+	</head>
+	<body>
+		<p>Paragraph text.</p>
+	</body>
+</html>
